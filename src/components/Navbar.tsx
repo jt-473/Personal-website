@@ -8,7 +8,7 @@ const links = [
   { href: "/about", label: "About", external: false },
   { href: "/work", label: "Work", external: false },
   { href: "/resume.pdf", label: "Resume", external: true },
-  { href: "mailto:jovantomy@icloud.com", label: "Contact", external: true },
+  { href: "https://www.linkedin.com/in/jovan-tomy-077b1a32a/", label: "Contact", external: true },
 ];
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="hover:opacity-70 transition-opacity duration-200 cursor-pointer"
-            style={{ fontFamily: "Hussar, sans-serif", fontSize: "18px", fontWeight: "bold", color: "#E1E0CC" }}
+            style={{ fontFamily: "Hussar, sans-serif", fontSize: "18px", fontWeight: "bold", color: "#F94F02" }}
           >
             JT
           </Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
                 {pathname === href && (
                   <motion.div
                     className="absolute -bottom-1 left-0 right-0 h-px"
-                    style={{ backgroundColor: "#E1E0CC" }}
+                    style={{ backgroundColor: "#F94F02" }}
                     layoutId="nav-underline"
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   />

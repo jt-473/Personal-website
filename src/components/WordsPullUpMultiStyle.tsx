@@ -25,9 +25,9 @@ export default function WordsPullUpMultiStyle({ segments, className = "" }: Prop
   });
 
   return (
-    <span ref={ref} className={`inline-flex flex-wrap justify-center gap-x-[0.28em] ${className}`}>
+    <span ref={ref} className={`inline-flex flex-wrap justify-start gap-x-[0.28em] ${className}`}>
       {words.map((item, i) => (
-        <span key={i} className={`overflow-hidden inline-block ${item.cls}`}>
+        <span key={i} className={`inline-block ${item.cls}`} style={{ padding: "0 0.05em", margin: "0 -0.05em" }}>
           <motion.span
             className="inline-block"
             initial={{ y: 20, opacity: 0 }}
