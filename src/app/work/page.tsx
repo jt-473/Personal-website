@@ -105,8 +105,27 @@ export default function Work() {
           ))}
         </div>
 
+        {/* Experience */}
+        <div className="mt-16">
+          <motion.p
+            className="text-[10px] sm:text-xs mb-8 tracking-widest uppercase"
+            style={{ fontFamily: "Hussar, sans-serif", color: "#F94F02" }}
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            experience & roles
+          </motion.p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2">
+            {experience.map((item, i) => (
+              <WorkCard key={item.slug} item={item} index={i} />
+            ))}
+          </div>
+        </div>
+
         {/* Currently working on */}
-        <div className="mt-16 mb-16">
+        <div className="mt-16">
           <motion.p
             className="text-[10px] sm:text-xs mb-8 tracking-widest uppercase"
             style={{ fontFamily: "Hussar, sans-serif", color: "#60A5FA" }}
@@ -145,25 +164,6 @@ export default function Work() {
                   )}
                 </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Experience */}
-        <div className="mt-16">
-          <motion.p
-            className="text-[10px] sm:text-xs mb-8 tracking-widest uppercase"
-            style={{ fontFamily: "Hussar, sans-serif", color: "#F94F02" }}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            experience & roles
-          </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2">
-            {experience.map((item, i) => (
-              <WorkCard key={item.slug} item={item} index={i} />
             ))}
           </div>
         </div>
