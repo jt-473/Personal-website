@@ -139,7 +139,7 @@ export default function Work() {
           <div className="flex flex-col gap-3">
             {[
               { label: "Mini-course", title: "Python for Sport Scientists", sub: "teaching undergrads to use Python for lab reports & essays to get higher grades" },
-              { label: "AI Agent", title: "Sport & Exercise Science research agent", sub: "pulls papers, articles, creates graphs" },
+              { label: "AI Agent", title: "Research agent for STEM degrees", sub: "pulls papers, articles, creates graphs" },
               { label: "AI Assistant", title: "Personal branding content assistant", sub: "for LinkedIn" },
             ].map((item, i) => (
               <motion.div
