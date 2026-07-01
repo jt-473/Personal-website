@@ -98,30 +98,39 @@ export default function Work() {
           </div>
         </div>
 
+        {/* Projects */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2">
+          {projects.map((item, i) => (
+            <WorkCard key={item.slug} item={item} index={i} />
+          ))}
+        </div>
+
         {/* Currently working on */}
-        <div className="mb-16">
+        <div className="mt-16 mb-16">
           <motion.p
             className="text-[10px] sm:text-xs mb-8 tracking-widest uppercase"
             style={{ fontFamily: "Hussar, sans-serif", color: "#60A5FA" }}
             initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
             currently working on
           </motion.p>
           <div className="flex flex-col gap-3">
             {[
-              { label: "Mini-course", title: "Python for Sport Scientists", sub: "+ data analytics" },
+              { label: "Mini-course", title: "Python for Sport Scientists", sub: "teaching undergrads to use Python for lab reports & essays to get higher grades" },
               { label: "AI Agent", title: "Sport & Exercise Science research agent", sub: "pulls papers, articles, creates graphs" },
-              { label: "AI Assistant", title: "Personal branding content assistant", sub: "" },
+              { label: "AI Assistant", title: "Personal branding content assistant", sub: "for LinkedIn" },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 className="rounded-2xl px-6 py-5 border flex items-center gap-5"
                 style={{ backgroundColor: "#060d1a", borderColor: "rgba(96,165,250,0.15)" }}
                 initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: 0.25 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
               >
                 <span className="w-2 h-2 rounded-full shrink-0 animate-pulse" style={{ backgroundColor: "#60A5FA" }} />
                 <div className="flex items-baseline gap-3 flex-wrap">
@@ -138,13 +147,6 @@ export default function Work() {
               </motion.div>
             ))}
           </div>
-        </div>
-
-        {/* Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2">
-          {projects.map((item, i) => (
-            <WorkCard key={item.slug} item={item} index={i} />
-          ))}
         </div>
 
         {/* Experience */}
